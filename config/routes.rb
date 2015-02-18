@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'visitors#index'
   devise_for :users
   resources :users
 
@@ -7,7 +8,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'users#index'
-  root to: 'users#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
