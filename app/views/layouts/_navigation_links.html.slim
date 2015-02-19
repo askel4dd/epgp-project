@@ -1,7 +1,7 @@
 - if user_signed_in?
   li class="dropdown"
     a class="dropdown-toggle" aria-expanded="true" role="button" data-toggle="dropdown"
-      == current_user
+      == current_user.email
       span class="carret"
     ul class="dropdown-menu" role="menu"
       li
