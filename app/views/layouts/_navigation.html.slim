@@ -8,5 +8,10 @@ nav class="navbar navbar-inverse navbar-fixed-top"
         span class="icon-bar"
       == link_to 'ezDKP', root_path, :class=>'navbar-brand' 
     div id="navbar" class="collapse navbar-collapse"
+      /v otdelnyi fail eto govno nado
       ul class="nav navbar-nav"
+        - if user_signed_in?
+          li
+            == link_to 'Users', users_path
+      ul class="nav navbar-nav navbar-right"
         == render 'layouts/navigation_links'
