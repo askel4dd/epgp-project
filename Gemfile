@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'mailcatcher'
+
 gem 'sprockets-rails'
 gem 'quiet_assets'
 

@@ -1,0 +1,9 @@
+div class="container"
+  div class="starter-template"
+    h2 Paste your data
+    == simple_form_for @uploader, url: uploader_path do |f|
+      == f.input :source, class: "form-control", as: :text
+      == f.button :submit
+
+
+
