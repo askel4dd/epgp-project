@@ -6,9 +6,13 @@ class EpgpParser
   validate :json_format
 
   def json_format
-    JSON.parse(source)
+    @source_data ||= JSON.parse(source)
     rescue JSON::ParserError
       errors.add(:source, "Wrong format")
+  end
+
+  def parse
+    @source_data ||= json_format
   end
 
 end

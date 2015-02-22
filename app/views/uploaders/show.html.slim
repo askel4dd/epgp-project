@@ -1,0 +1,31 @@
+div class="container"
+  div class="starter-template"
+    div class="row"
+      div class="col-md-3" 
+        == 'Guild: ' + @uploader.parse['guild']
+      div class="col-md-3"
+        == 'Realm: ' + @uploader.parse['realm']
+      div class="col-md-3"
+        == 'Region: ' + @uploader.parse['region']
+    div class="row"
+      div class="col-md-2"
+        == 'Base GP: ' + @uploader.parse['base_gp'].to_s
+      div class="col-md-2"
+        == 'Min EP: ' + @uploader.parse['min_ep'].to_s
+      div class="col-md-2"
+        == 'Decay P: ' + @uploader.parse['decay_p'].to_s
+      div class="col-md-2"
+        == 'Extras P: ' + @uploader.parse['extras_p'].to_s
+    h2 Roster:
+    table class="table"
+      thead
+        tr
+          th Nickname
+          th EP
+          th GP
+      tbody
+        - @uploader.parse['roster'].each do |player|
+          tr
+            td == player[0]
+            td == player[1]
+            td == player[2]
