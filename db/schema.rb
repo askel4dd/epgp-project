@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150217164247) do
+ActiveRecord::Schema.define(version: 20150223163027) do
+
+  create_table "guilds", force: :cascade do |t|
+    t.string   "name"
+    t.string   "region"
+    t.string   "server"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string   "nickname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "guild_id"
+  end
+
+  add_index "players", ["guild_id"], name: "index_players_on_guild_id"
 
   create_table "users", force: :cascade do |t|
     t.datetime "created_at",                          null: false

@@ -16,6 +16,8 @@ div class="container"
         == 'Decay P: ' + @uploader.parse['decay_p'].to_s
       div class="col-md-2"
         == 'Extras P: ' + @uploader.parse['extras_p'].to_s
+      /div class="col-md-2"
+        == 'Timestamp: ' + @uploader.parse['timestamp'].to_time
     h2 Roster:
     table class="table"
       thead
