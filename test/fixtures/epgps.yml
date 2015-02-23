@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ep: 1
+  gp: 1
+  recorded_at: 1
+  Player_id: 
+
+two:
+  ep: 1
+  gp: 1
+  recorded_at: 1
+  Player_id: 
