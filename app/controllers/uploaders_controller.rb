@@ -3,7 +3,7 @@ class UploadersController < ApplicationController
     @uploader = EpgpParser.new
   end
 
-  def create 
+  def create
     @uploader = EpgpParser.new(parser_params)
     if @uploader.valid?
       render :show
@@ -15,7 +15,7 @@ class UploadersController < ApplicationController
   private
 
   def parser_params
-    params.require(:epgp_parser).permit(:source)
+    params.require(:epgp_parser).permit(:source, :guild)
   end
 
 end

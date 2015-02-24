@@ -2,12 +2,12 @@ div class="container"
   div class="starter-template"
     div class="row"
       div class="col-md-3" 
-        == 'Guild: ' + @uploader.parse['guild']
+        == 'Guild: ' + @uploader.guild.name
       div class="col-md-3"
-        == 'Realm: ' + @uploader.parse['realm']
+        == 'Realm: ' + @uploader.guild.server
       div class="col-md-3"
-        == 'Region: ' + @uploader.parse['region']
-    div class="row"
+        == 'Region: ' + @uploader.guild.region
+    /div class="row"
       div class="col-md-2"
         == 'Base GP: ' + @uploader.parse['base_gp'].to_s
       div class="col-md-2"
@@ -17,7 +17,7 @@ div class="container"
       div class="col-md-2"
         == 'Extras P: ' + @uploader.parse['extras_p'].to_s
       /div class="col-md-2"
-        == 'Timestamp: ' + @uploader.parse['timestamp'].to_time
+        == 'Timestamp: ' + @uploader.id
     h2 Roster:
     table class="table"
       thead
@@ -26,8 +26,8 @@ div class="container"
           th EP
           th GP
       tbody
-        - @uploader.parse['roster'].each do |player|
+        - @uploader.guild.epgps.each do |player|
           tr
-            td == player[0]
-            td == player[1]
-            td == player[2]
+            td == player.nickname
+            td == player.ep
+            td == player.gp

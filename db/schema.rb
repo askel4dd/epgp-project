@@ -17,12 +17,13 @@ ActiveRecord::Schema.define(version: 20150223180917) do
     t.integer  "ep"
     t.integer  "gp"
     t.integer  "recorded_at"
-    t.integer  "player_id"
+    t.string   "nickname"
+    t.integer  "guild_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
-  add_index "epgps", ["player_id"], name: "index_epgps_on_player_id"
+  add_index "epgps", ["guild_id"], name: "index_epgps_on_guild_id"
 
   create_table "guilds", force: :cascade do |t|
     t.string   "name"

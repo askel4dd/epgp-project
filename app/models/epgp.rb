@@ -1,3 +1,3 @@
 class Epgp < ActiveRecord::Base
-  belongs_to :player
+  belongs_to :guild
 end

@@ -4,11 +4,11 @@ class CreateEpgps < ActiveRecord::Migration
       t.integer :ep
       t.integer :gp
       t.integer :recorded_at
-      t.belongs_to :player, index: true
+      t.string  :nickname
+      t.belongs_to :guild, index: true
 
       t.timestamps null: false
     end
-    #add_reference :epgps, :Player, index: true
-    add_foreign_key :epgps, :players
+    add_foreign_key :epgps, :guilds
   end
 end
