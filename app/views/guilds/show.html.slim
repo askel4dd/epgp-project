@@ -1,3 +1,15 @@
 h1 == @guild.name
-- @guild.epgps.each do |player|
-  p == player.nickname
+table class="table"
+  thead
+    tr
+      th Nickname
+      th EP
+      th GP
+      th PR
+  tbody 
+    - @guild.epgps.each do |player|
+      tr
+        td == player.nickname
+        td == player.ep
+        td == player.gp
+        td == player.loot_priority 
