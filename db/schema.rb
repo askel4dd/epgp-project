@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150223180917) do
+ActiveRecord::Schema.define(version: 20150225164140) do
 
   create_table "epgps", force: :cascade do |t|
-    t.integer  "ep"
-    t.integer  "gp"
+    t.integer  "effort_points"
+    t.integer  "gear_points"
     t.integer  "recorded_at"
     t.string   "nickname"
     t.integer  "guild_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   add_index "epgps", ["guild_id"], name: "index_epgps_on_guild_id"
