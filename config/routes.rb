@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+
   resource :uploader
-  resource :guilds
+  resources :guilds
   root to: 'visitors#index'
   devise_for :users
   resources :users

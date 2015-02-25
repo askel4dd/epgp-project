@@ -8,13 +8,8 @@ class EpgpParser
 
   def json_format
     @source_data ||= JSON.parse(source)
-    save
     rescue JSON::ParserError
       errors.add(:source, "Wrong format")
-  end
-
-  def parse
-    @source_data ||= json_format
   end
 
   def save

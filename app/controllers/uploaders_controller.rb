@@ -6,6 +6,7 @@ class UploadersController < ApplicationController
   def create
     @uploader = EpgpParser.new(parser_params)
     if @uploader.valid?
+      @uploader.save
       render :show
     else
       render :new
