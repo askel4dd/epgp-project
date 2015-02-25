@@ -1,15 +1,15 @@
 h1 == @guild.name
-table class="table"
+table.table [data-sortable]
   thead
     tr
       th Nickname
       th EP
       th GP
       th PR
-  tbody 
+  tbody
     - @guild.epgps.each do |player|
       tr
         td == player.nickname
         td == player.effort_points
         td == player.gear_points
-        td == player.loot_priority 
+        td == player.loot_priority
