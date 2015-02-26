@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150225184018) do
+ActiveRecord::Schema.define(version: 20150226131052) do
 
   create_table "epgps", force: :cascade do |t|
     t.integer  "effort_points"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20150225184018) do
   create_table "guilds", force: :cascade do |t|
     t.string   "name"
     t.string   "region"
-    t.string   "server"
+    t.string   "realm"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
