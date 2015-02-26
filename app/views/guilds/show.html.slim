@@ -1,4 +1,7 @@
 h1 == @guild.name
+== simple_form_for @guild do |f|
+  == f.input @recorded_at, options_for_select(@guild.list_timestamps)
+  == f.button :submit
 table.sortable-theme-bootstrap [data-sortable]
   thead
     tr
@@ -7,7 +10,7 @@ table.sortable-theme-bootstrap [data-sortable]
       th GP
       th PR
   tbody
-    - @guild.epgps.each do |player|
+    - @guild.epgps.where(recorded_at: @recorded_at ) do |player|
       tr
         td == player.nickname
         td == player.effort_points
