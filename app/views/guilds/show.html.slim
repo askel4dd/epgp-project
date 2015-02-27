@@ -1,7 +1,12 @@
 h1 == @guild.name
-== simple_form_for @guild do |f|
-  == f.input @recorded_at, options_for_select(@guild.list_timestamps)
-  == f.button :submit
+div.dropdown
+  button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"
+    Timestamps
+  ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1"
+    - @guild.list_timestamps.each do |stamp|
+      li role="presentation"
+        a role="menuitem" tabindex="-1"
+          == link_to stamp, guild_timestamp_path(@guild.id,stamp)
 table.sortable-theme-bootstrap [data-sortable]
   thead
     tr
@@ -10,7 +15,7 @@ table.sortable-theme-bootstrap [data-sortable]
       th GP
       th PR
   tbody
-    - @guild.epgps.where(recorded_at: @recorded_at ) do |player|
+    - @roster.each do |player|
       tr
         td == player.nickname
         td == player.effort_points

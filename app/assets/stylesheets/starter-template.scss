@@ -9,3 +9,9 @@ body {
 table {
       text-align: left
 }
+
+.scrollable-menu {
+    height: auto;
+    max-height: 150px;
+    overflow-x: hidden;
+}

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
 
+  get 'guilds/:id/:recorded_at' => 'guilds#show', as: 'guild_timestamp'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
