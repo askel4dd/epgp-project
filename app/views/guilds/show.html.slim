@@ -1,12 +1,9 @@
 h1 == @guild.name
 div.dropdown
-  button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"
-    Timestamps
-  ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1"
+  button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" Timestamps
+  ul class="dropdown-menu scrollable-menu" role="menu"
     - @guild.list_timestamps.each do |stamp|
-      li role="presentation"
-        a role="menuitem" tabindex="-1"
-          == link_to stamp, guild_timestamp_path(@guild.id,stamp)
+      li == link_to stamp, guild_timestamp_path(@guild.id,stamp)
 table.sortable-theme-bootstrap [data-sortable]
   thead
     tr
