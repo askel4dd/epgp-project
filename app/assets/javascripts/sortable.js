@@ -1,4 +1,4 @@
-(function() {
+$(document).on("page:load", function() {
   var SELECTOR, clickEvent, numberRegExp, sortable, touchDevice, trimRegExp;
 
   SELECTOR = 'table[data-sortable]';
@@ -142,4 +142,4 @@
 
   window.Sortable = sortable;
 
-}).call(this);
+});
