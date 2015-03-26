@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class GuildTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def setup
+    @guild = guilds(:one)
+  end
 end

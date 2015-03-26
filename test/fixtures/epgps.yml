@@ -4,10 +4,10 @@ one:
   ep: 1
   gp: 1
   recorded_at: 1
-  Player_id: 
+  guild_id: 1 
 
 two:
   ep: 1
   gp: 1
   recorded_at: 1
-  Player_id: 
+  guild_id: 2

@@ -1,11 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  region: MyString
-  server: MyString
+  id: 1
+  name: Mesmerize
+  region: EU
+  realm: Shadowmoon
+  user_id: 1
 
 two:
-  name: MyString
-  region: MyString
-  server: MyString
+  id: 2
+  name: Arthas
+  region: EU
+  realm: Warsong
+  user_id: 2
