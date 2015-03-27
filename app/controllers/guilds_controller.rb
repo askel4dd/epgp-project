@@ -5,7 +5,7 @@ class GuildsController < ApplicationController
 
   def show
     @guild = Guild.find(params[:id])
-    @roster = @guild.roster_on_timestamp
+    @roster = @guild.roster_on_timestamp(params[:recorded_at])
   end
 
   private
