@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  ep: 1
-  gp: 1
+  effort_points: 500
+  gear_points: 200
   recorded_at: 1
+  nickname: "Zelda"
   guild_id: 1 
 
 two:
-  ep: 1
-  gp: 1
+  effort_points: 300
+  gear_points: 100
   recorded_at: 1
+  nickname: "Link"
   guild_id: 2
