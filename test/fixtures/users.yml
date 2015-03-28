@@ -6,10 +6,12 @@
 #
 one_gmail: {
     id: 1,
-    email: 'one@gmail.com'}
-# column: value
-#
+    email: 'one@gmail.com',
+    encrypted_password: "$2a$10$kdUTr.HMFt2EaKhVwweaF..FkgT.NwDS8453VMNmpiyDot/VoiFUS"
+    }
+
 two_gmail: {
     id: 2,
-    email: 'two@gmail.com'}
-#  column: value
+    email: 'two@gmail.com',
+    encrypted_password: "$2a$10$kdUTr.HMFt2EaKhVwweaF..FkgT.NwDS8453VMNmpiyDot/VoiFUS"
+    }
