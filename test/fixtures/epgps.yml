@@ -1,22 +1,28 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+epgp_for_zelda:
   effort_points: 500
   gear_points: 200
   recorded_at: 1420825500
   nickname: "Zelda"
   guild_id: 1 
 
-two:
+epgp_for_link:
   effort_points: 300
   gear_points: 100
   recorded_at: 1410825197
   nickname: "Link"
   guild_id: 2
 
-three:
+epgp_for_sanic:
   effort_points: 1000
   gear_points: 900
   recorded_at: 1421835611
   nickname: "Sanic"
+  guild_id: 1
+epgp_for_yolo:
+  effort_points: 100
+  gear_points: 100
+  recorded_at: 1420825500
+  nickname: "Yolo"
   guild_id: 1

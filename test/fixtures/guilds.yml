@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+mesmerize:
   id: 1
   name: Mesmerize
   region: EU
   realm: Shadowmoon
   user_id: 1
 
-two:
+arthas:
   id: 2
   name: Arthas
   region: EU
